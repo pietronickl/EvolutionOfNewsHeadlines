@@ -8,9 +8,9 @@ The scripts in this repository contain the analyses used in our paper and can be
 - feature_extract_clean_dataCL.py
 
 The next three scripts combine these analyses in one file for straightforward plotting and stats in R
-- extract_final_features.r
 - combine_BIG4_csvs.r
 - combine_features_sentiment_syntax.r
+- extract_final_features.r
 
 
 ### R scripts for statistical analysis: 
