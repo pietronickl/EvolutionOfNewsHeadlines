@@ -2,7 +2,7 @@
 '''
 1) this script wrangles the different datasets into the same format:
 at the end we get a dataframe for each corpus with the columns
-'text' string containing the headline (or title or sentence in the ARXIV/TED corpus respectively)
+'text' string containing the headline (or title in the ARXIV corpus)
 'year' as an int
 'outlet' string referring to the website, platform or wherever the text is from
 
@@ -38,12 +38,12 @@ NOW = NOW.rename(columns = {'title' : 'raw_text'})
 #%%
 # extract the year information as int and name the column "year"
 # this does not apply to ARXIV and upworthy data
-# upworthy does not span a wide enough range and TED serves as a static reference point for spoken language
+# upworthy does not span a wide enough range 
 # we also use ARXIV as a static reference point for "scientific titles"
 # but there the corpus spans such a wide range that it is interesting to
 # plot the development over time 
 
-# upworthy and TED don't get a 'year' col 
+# upworthy doesn't get a 'year' col 
 
 # NYT already has 'year' col
 # Guardian already has 'year' col
