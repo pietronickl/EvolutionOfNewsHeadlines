@@ -1,11 +1,12 @@
 The scripts in this repository contain the analyses used in our paper and can be used to to reproduce our findings.
 
 
-### Python scripts for preprocessing and natural language processing:  
+### Scripts for preprocessing and natural language processing:  
 - clean_raw_dataCL.py
 - sentiment_analyse_clean_dataCL.py
 - syntax_analyse_clean_dataCL.py
 - feature_extract_clean_dataCL.py
+- extract_final_features.r
 
 
 ### R scripts for statistical analysis: 
