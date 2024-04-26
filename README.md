@@ -29,9 +29,9 @@ The next three scripts combine these analyses in one file for straightforward pl
 
 ### Data Availability:
 
-- The license we purchased for the NOW corpus cannot be shared, but researchers can purchase a license at https://www.english-corpora.org/now/ \
-- ABC News Australia - this dataset is freely available for download on Kaggle at https://www.kaggle.com/datasets/therohk/million-headlines/data \
-- The Times of India: this dataset is freely available for download on the Harvard Dataverse at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DPQMQH \
-- The official APIs for The Guardian (https://open-platform.theguardian.com/documentation/) and The New York Times (https://developer.nytimes.com/apis) can be used to collect the headlines for these outlets. \
-- Upworthy headlines: The exploratory package can be downloaded from OSF at https://osf.io/3vqmp  \
+- The license we purchased for the NOW corpus cannot be shared, but researchers can purchase a license at https://www.english-corpora.org/now/ 
+- ABC News Australia - this dataset is freely available for download on Kaggle at https://www.kaggle.com/datasets/therohk/million-headlines/data 
+- The Times of India: this dataset is freely available for download on the Harvard Dataverse at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DPQMQH 
+- The official APIs for The Guardian (https://open-platform.theguardian.com/documentation/) and The New York Times (https://developer.nytimes.com/apis) can be used to collect the headlines for these outlets. 
+- Upworthy headlines: The exploratory package can be downloaded from OSF at https://osf.io/3vqmp  
 - arXiv: The arXiv dataset can be downloaded from Hugging Face at https://huggingface.co/datasets/arxiv_dataset
