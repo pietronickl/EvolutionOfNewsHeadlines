@@ -4,7 +4,6 @@ library(tidyverse)
 BIG4 <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/BIG4.rds")
 NOW <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW.rds")
 upworthy <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/upworthy.rds")
-TED <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/TED.rds")
 ARXIV <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/ARXIV.rds")
 NYT_2000_onwards <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NYT_2000_onwards.rds")
 
@@ -62,9 +61,6 @@ saveRDS(NOW_plotting, "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_p
 
 upworthy_plotting <- augment_df(upworthy)
 saveRDS(upworthy_plotting, "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/upworthy_plotting.rds")
-
-TED_plotting <- augment_df(TED)
-saveRDS(TED_plotting, "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/TED_plotting.rds")
 
 ARXIV_plotting <- augment_df(ARXIV)
 saveRDS(ARXIV_plotting, "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/ARXIV_plotting.rds")
