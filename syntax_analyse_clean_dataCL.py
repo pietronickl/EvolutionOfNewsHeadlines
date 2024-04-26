@@ -157,23 +157,7 @@ def list_leaves(sentence):
     return leaves
 
 '''
-#%% load the pickles for further consituent analysis 
 '''
-#import os
-#import pandas as pd
-
-pickle_directory = '/Volumes/Users/NicklPietro/PaperIIwb/results/syntax'
-
-dfs = {}
-
-for filename in os.listdir(pickle_directory):
-    if filename.endswith(".pkl"):
-        file_path = os.path.join(pickle_directory, filename)
-        df_name = os.path.splitext(filename)[0]
-        dfs[df_name] = pd.read_pickle(file_path)
-
-
-
 #%%
 def get_root_from_doc(doc):
     root = []
@@ -233,7 +217,7 @@ def get_parsed_sentence(sentence):
 # just get the lowest node level 
 
 # this is almost too acribic: it distinguishes between proper nouns, noun phrases and singular and plural nouns 
-# bit tiresome: it distinguishes between NN and NNS, which seems to stand for plural noun
+# bit tiresome: it distinguishes between NN and NNS, which stands for plural noun
 
 # there is a question of whether we want to keep punctuation or not-
 # I guess we could be conservative and keep it for now and delete it later
