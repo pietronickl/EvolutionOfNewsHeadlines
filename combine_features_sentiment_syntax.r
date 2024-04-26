@@ -37,21 +37,3 @@ upworthy <- upworthy_features %>%
   left_join(upworthy_sentiment %>% select(Unnamed..0, sentiment, score), by = "Unnamed..0") %>%
   left_join(upworthy_syntax %>% select(Unnamed..0, tree, root), by = "Unnamed..0")
 saveRDS(upworthy, file = "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/upworthy.rds")
-
-TED_features <- read.csv('/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/features/TED_full_features.csv')
-TED_sentiment <- read.csv('/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/sentiment/TED_full_flair.csv')
-TED_syntax <- read.csv('/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/syntax/TED_full_root.csv')
-TED <- TED_features %>%
-  left_join(TED_sentiment %>% select(Unnamed..0, sentiment, score), by = "Unnamed..0") %>%
-  left_join(TED_syntax %>% select(Unnamed..0, tree, root), by = "Unnamed..0")
-saveRDS(TED, file = "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/TED.rds")
-
-
-NOW <- readRDS("NOW.rds")
-NOW <- readRDS("NOW.rds")
-NOW <- readRDS("NOW.rds")
-NOW <- readRDS("NOW.rds")
-NOW <- readRDS("NOW.rds")
-
-
-
