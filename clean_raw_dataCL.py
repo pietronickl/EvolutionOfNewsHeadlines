@@ -16,16 +16,6 @@ from tqdm import tqdm
 tqdm.pandas()
 #%%
 
-#NYT = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/NYT_sample.csv')
-#Guardian = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/Guardian_sample.csv')
-#ABC = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/ABC_sample.csv')
-#TOI = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/TOI_sample.csv')
-#NOW = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/NOW_sample.csv')
-#upworthy = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/upworthy_sample.csv')
-#TED = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/TED_sample.csv')
-#ARXIV = pd.read_csv('/Volumes/Users/NicklPietro/PaperII/toy_data/ARXIV_sample.csv')
-
-
 #NYT = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/NYT_headlines_2000_2022.csv')
 #Guardian = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/Guardian_headlines_2000_2022.csv')
 #ABC = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/abcnews-date-text.csv')
@@ -33,7 +23,6 @@ tqdm.pandas()
 #NOW = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/NOW_sources_2010_2023.csv')
 NOW = pd.read_csv('u:\\NicklPietro\\PaperIIwb\\NOW_sources_2010_2023.csv')
 #upworthy = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/upworthy-archive-exploratory-packages-03.12.2020.csv')
-#TED = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/TED_talks_as_sentences.csv')
 #ARXIV = pd.read_csv('/Volumes/Users/NicklPietro/PaperIIwb/raw_data/arXiv_2007_2023.csv')
 
 #%%
@@ -44,7 +33,6 @@ NOW = pd.read_csv('u:\\NicklPietro\\PaperIIwb\\NOW_sources_2010_2023.csv')
 #TOI = TOI.rename(columns = {'headline_text' : 'raw_text'}) 
 NOW = NOW.rename(columns = {'title' : 'raw_text'}) 
 #upworthy = upworthy.rename(columns = {'headline' : 'raw_text'}) 
-#TED = TED.rename(columns = {'sentences' : 'raw_text'}) 
 #ARXIV = ARXIV.rename(columns = {'title' : 'raw_text'}) 
 
 #%%
@@ -82,7 +70,6 @@ NOW['year'] = NOW['date'].progress_apply(lambda x: x.year)
 #TOI = TOI.assign(outlet='TOI')
 NOW = NOW.rename(columns = {'site' : 'outlet'}) 
 #upworthy = upworthy.assign(outlet='upworthy')
-#TED = TED.assign(outlet='TED')
 #ARXIV = ARXIV.assign(outlet='ARXIV')
 
 # %%
