@@ -138,39 +138,3 @@ for year in df['year'].unique():
     df_year.to_csv(file_path, index=False)
 
     print(f"Exported {year} data to {file_path}")
-#%%
-
-import re
-def is_clean(text):
-    # Check for HTML tags
-    if re.search('<[^<]+?>', text):
-        return False
-    else:
-        return True 
-
-def contains_escape_characters(text):
-    escape_chars = ['\n', '\t', '\r']
-    return any(char in text for char in escape_chars)
-
-def contains_double_whitespace(text):
-    return bool(re.search(r'\s\s', text))
-
-def trails_off(text):
-    return text.endswith('...')
-
-
-# Problems:
-# the ABC corpus is odd, it lacks punctuation and everything is lower case, 
-# also it seems like some healdines are truncated
-
-# some NOW healdines are truncated 
-# len(NOW[NOW.clean_text.apply(trails_off)])
-# 1216 out of 5000 NOW headlines trail off, that's 25%!
-
-# %%
-# export the cleaned data, only keeping the relevant columns
-
-
-
-# in a next step, data will be filtered, and some outliers will be dropped
-# some descriptive plots before stats
