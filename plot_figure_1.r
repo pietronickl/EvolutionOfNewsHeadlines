@@ -7,7 +7,6 @@ NOW_raw <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_plot
 NOW_clean <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_cleaned_noBIG4_plotting.rds")
 NOW_consistent <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_cleaned_consistent500since2010_plotting.rds")
 upworthy_raw <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/upworthy_plotting.rds")
-TED <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/TED_plotting.rds")
 ARXIV <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/ARXIV_plotting.rds")
 NOW_consistent_noTOI <- NOW_consistent %>%
   filter(source_domain != "timesofindia.indiatimes.com")
