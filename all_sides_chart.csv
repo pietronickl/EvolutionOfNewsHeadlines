@@ -1,0 +1,68 @@
+outlet_name,url_from_allsides,problem.,url_checked,political_leaning,source_domain
+AlterNet,https://www.alternet.org/,,https://www.alternet.org/,left,www.alternet.org
+TheAtlantic,http://www.theatlantic.com/,,http://www.theatlantic.com/,left,www.theatlantic.com
+Democracy Now!,https://www.democracynow.org/,,https://www.democracynow.org/,left,www.democracynow.org
+Daily Best,https://www.thedailybeast.com/,,https://www.thedailybeast.com/,left,www.thedailybeast.com
+Huffpost,https://www.huffpost.com/,,https://www.huffpost.com/,left,www.huffpost.com
+The Intercept_,https://theintercept.com/,,https://theintercept.com/,left,theintercept.com
+Jacobin,https://jacobin.com/,,https://jacobin.com/,left,jacobin.com
+Mother Jones,https://www.motherjones.com/,,https://www.motherjones.com/,left,www.motherjones.com
+MSNBC,https://www.msnbc.com/,,https://www.msnbc.com/,left,www.msnbc.com
+The New Yorker,https://www.newyorker.com/,,https://www.newyorker.com/,left,www.newyorker.com
+The New York Times (opinion),https://www.nytimes.com/section/opinion,,https://www.nytimes.com/section/opinion,left,www.nytimes.com
+The Nation.,https://www.thenation.com/,,https://www.thenation.com/,left,www.thenation.com
+Slate,https://slate.com/,,https://slate.com/,left,slate.com
+Vox,https://www.vox.com/,,https://www.vox.com/,left,www.vox.com
+abc News,https://abcnews.go.com/,,https://abcnews.go.com/,slight_left,abcnews.go.com
+AP (associated press),https://apnews.com/,,https://apnews.com/,slight_left,apnews.com
+Axios,https://www.axios.com/,,https://www.axios.com/,slight_left,www.axios.com
+Bloomberg,http://www.bloomberg.com/,,http://www.bloomberg.com/,slight_left,www.bloomberg.com
+CBS News,https://www.cbsnews.com/,,https://www.cbsnews.com/,slight_left,www.cbsnews.com
+CNN,http://www.cnn.com/,,http://www.cnn.com/,slight_left,www.cnn.com
+The Guardian,https://www.theguardian.com/,,https://www.theguardian.com/,slight_left,www.theguardian.com
+Insider,https://www.insider.com/,,https://www.insider.com/,slight_left,www.insider.com
+NBC News,http://www.nbcnews.com/,,http://www.nbcnews.com/,slight_left,www.nbcnews.com
+The New York Times (news),http://www.nytimes.com/,,http://www.nytimes.com/,slight_left,www.nytimes.com
+npr,http://www.npr.org/,,http://www.npr.org/,slight_left,www.npr.org
+politico,http://www.politico.com/,,http://www.politico.com/,slight_left,www.politico.com
+propublica,http://www.propublica.org/,,http://www.propublica.org/,slight_left,www.propublica.org
+Time,http://www.time.com/,,http://www.time.com/,slight_left,www.time.com
+The Washington Post,https://www.washingtonpost.com/,,https://www.washingtonpost.com/,slight_left,www.washingtonpost.com
+USA Today,https://www.usatoday.com/,,https://www.usatoday.com/,slight_left,www.usatoday.com
+yahoo! news,https://www.yahoo.com/,,https://www.yahoo.com/,slight_left,www.yahoo.com
+BBC news,http://www.bbc.com/,,http://www.bbc.com/,center,www.bbc.com
+The Cristian Science Montior.,http://www.csmonitor.com/,,http://www.csmonitor.com/,center,www.csmonitor.com
+Forbes,http://www.forbes.com/,,http://www.forbes.com/,center,www.forbes.com
+MarketWatch,https://www.marketwatch.com/,,https://www.marketwatch.com/,center,www.marketwatch.com
+NewsNation,https://www.newsnationnow.com/,,https://www.newsnationnow.com/,center,www.newsnationnow.com
+Newsweek,https://www.newsweek.com/,,https://www.newsweek.com/,center,www.newsweek.com
+Reuters,http://www.reuters.com/,,http://www.reuters.com/,center,www.reuters.com
+RealClear Politics,http://www.realclearpolitics.com/,,http://www.realclearpolitics.com/,center,www.realclearpolitics.com
+The Hill,https://www.thehill.com/,,https://www.thehill.com/,center,www.thehill.com
+The Wall Street Journal (news),http://wsj.com/,,https://www.wsj.com/,center,www.wsj.com
+The Dispatch,https://thedispatch.com/,,https://thedispatch.com/,slight_right,thedispatch.com
+The epoch times,https://www.theepochtimes.com/,,https://www.theepochtimes.com/,slight_right,www.theepochtimes.com
+Fox Business,https://www.foxbusiness.com/,,https://www.foxbusiness.com/,slight_right,www.foxbusiness.com
+National Review (news),https://www.allsides.com/news-source/nationalreview.com/news/,,https://www.nationalreview.com/,slight_right,www.nationalreview.com
+New York Post (news),http://www.nypost.com/,,http://www.nypost.com/,slight_right,www.nypost.com
+reason,https://reason.com/,,https://reason.com/,slight_right,reason.com
+The Wall Street Journal (opinion),https://www.wsj.com/news/opinion,,https://www.wsj.com/news/opinion,slight_right,www.wsj.com
+Washington Examiner,http://washingtonexaminer.com/,,http://washingtonexaminer.com/,slight_right,washingtonexaminer.com
+The Washington Times,http://www.washingtontimes.com/,,http://www.washingtontimes.com/,slight_right,www.washingtontimes.com
+The American Conservative,http://www.theamericanconservative.com/,,http://www.theamericanconservative.com/,right,www.theamericanconservative.com
+The American Spectator,http://spectator.org/,,http://spectator.org/,right,spectator.org
+Breitbart,http://www.breitbart.com/,,http://www.breitbart.com/,right,www.breitbart.com
+Blaze media,http://www.theblaze.com/,,http://www.theblaze.com/,right,www.theblaze.com
+CBN,http://www1.cbn.com/,,http://www1.cbn.com/,right,www1.cbn.com
+Daily Caller,http://dailycaller.com/,,http://dailycaller.com/,right,dailycaller.com
+Daily Mail,http://dailymail.co.uk/,,http://dailymail.co.uk/,right,dailymail.co.uk
+The Daily Wire,http://www.dailywire.com/,,http://www.dailywire.com/,right,www.dailywire.com
+The Post Millennial.,https://www.thepostmillennial.com/,,https://www.thepostmillennial.com/,right,www.thepostmillennial.com
+Fox News,http://www.foxnews.com/,,http://www.foxnews.com/,right,www.foxnews.com
+the Federalist,http://thefederalist.com/,,http://thefederalist.com/,right,thefederalist.com
+independent journal review,https://ijr.com/,,https://ijr.com/,right,ijr.com
+national review (opinion),http://www.nationalreview.com/,"problematic, this is the same link as above! so national review is not once ""news"" and once ""opinion"" ",http://www.nationalreview.com/,right,www.nationalreview.com
+New York Post (opinion),https://nypost.com/opinion/,,https://nypost.com/opinion/,right,nypost.com
+Newsmax,http://www.newsmax.com/,,http://www.newsmax.com/,right,www.newsmax.com
+The Washington Free Beacon ,http://freebeacon.com/,,http://freebeacon.com/,right,freebeacon.com
+OAN One America News Network,https://www.oann.com/,,https://www.oann.com/,right,www.oann.com
