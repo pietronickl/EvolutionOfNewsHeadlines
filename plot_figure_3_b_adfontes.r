@@ -1,8 +1,14 @@
-# the purpose of this script is to compare the subets of the NOW with different political orientations
+# the purpose of this script is to compare, within the NOW corpus, the sources
+# of high journalistic quality (more serious, broadsheet-style news, e.g., The Guardian) with those of 
+# lower journalistic quality (more tabloid-style, sensationalist etc., e.g., The Mirror)
 library(tidyverse)
 
 # import all the datasets
+
+# for NOW raw:
+#NOW <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_plotting.rds")
 NOW <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_cleaned_plotting.rds")
+
 upworthy_raw <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/upworthy_plotting.rds")
 ARXIV <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/ARXIV_plotting.rds")
 
@@ -66,44 +72,6 @@ for (var in binary_vars) {
 # subset the NOW_corpus
 #NOW_subsets <- readRDS("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/descriptive_plots/NOW_subsets.rds")
 
-allsides <- read.csv("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/descriptive_plots/all_sides_chart.csv")
-
-# add the political leanings
-# I am grouping together "slight right" and "right"; and "slight left" and "left"
-# I am doing this because we also lack the granularity in some cases, e.g. we don't 
-# distinguish between New York Times News and New York Times opinion 
-#  www.nationalreview.com     2
-# www.nytimes.com            2
-# www.wsj.com   
-# I am still getting the following warning: 
-#Detected an unexpected many-to-many relationship between `x` and `y`.
-#ℹ Row 297 of `x` matches multiple rows in `y`.
-#ℹ Row 15 of `y` matches multiple rows in `x`.
-#ℹ If a many-to-many relationship is expected, set `relationship = "many-to-many"` to silence this warning.
-# there should not be a many-to-many mapping now...
-
-allsides_leanings <- allsides %>% 
-  select(source_domain, political_leaning) %>%
-  mutate(political_leaning = case_when(
-    source_domain == "www.wsj.com" ~ "center",  # Exception for WSJ
-    political_leaning %in% c("left", "slight_left") ~ "left-leaning",
-    political_leaning %in% c("right", "slight_right") ~ "right-leaning",
-    political_leaning == "center" ~ "center",
-  ))
-
-left_leaning <- allsides_leanings %>%
-  filter(political_leaning == "left-leaning") %>%
-  pull(source_domain)
-
-right_leaning <- allsides_leanings %>%
-  filter(political_leaning == "right-leaning") %>%
-  pull(source_domain)
-
-center <- allsides_leanings %>%
-  filter(political_leaning == "center") %>%
-  pull(source_domain)
-
-
 # all the vars
 cont_vars <- c("char_n",
                "words_n",
@@ -111,50 +79,53 @@ cont_vars <- c("char_n",
                "FRE",
                "GFI")
 
-# for testing purposes:
 #binary_vars <- c("verb")
-#cont_vars <- c("char_n")
+#cont_vars <- c("words_n")
+
+green <- read_csv("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/final_figures/figure_3/adfontes_green.csv",
+                  col_names = FALSE)
+
+yellow <- read_csv("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/final_figures/figure_3/adfontes_yellow.csv",
+                   col_names = FALSE)
+
+outlets_green <- green[[1]]  # Extract the first column as a vector
+outlets_yellow <- yellow[[1]]  # Extract the first column as a vector
 
 vars <- c(binary_vars, cont_vars)
-
+#vars <- c("words_n", "is_NP") # for testing purposes use a subset 
 # for the NOW corpus
 for (var in vars) {
   
   # create a directory if it doesn't exist yet
-  dirname <- paste0("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/final_figures/figure_3/figure_3_a/NOW_cleaned/", var)
+  dirname <- paste0("/mnt/home/nickl/Users/NicklPietro/PaperIIwb/plotting/final_figures/figure_3/figure_3_b/NOW_cleaned_adfontes/", var)
+  
   if (!dir.exists(dirname))
   {
     dir.create(dirname, recursive = TRUE)
   }
   
   # subset the NOW corpus
-  NOW_right_leaning <- NOW[NOW$source_domain %in% right_leaning, ]
+  NOW_journalism_low <- NOW[NOW$source_domain %in% outlets_yellow, ]
   
-  NOW_left_leaning <- NOW[NOW$source_domain %in% left_leaning, ]
-  
-  NOW_center <- NOW[NOW$source_domain %in% center, ]
+  NOW_journalism_high <- NOW[NOW$source_domain %in% outlets_green, ]
   
   reference_corpora_plot <- plot_reference_corpora(var)
   
-  NOW_right_plot <- plot_corpus_color(var, NOW_right_leaning, "red")
+  journalism_low_plot <- plot_corpus_color(var, NOW_journalism_low, "red")
   
-  NOW_left_plot <- plot_corpus_color(var, NOW_left_leaning, "blue")
+  journalism_high_plot <- plot_corpus_color(var, NOW_journalism_high, "blue") 
   
-  NOW_center_plot <- plot_corpus_color(var, NOW_center, "black")
-  
-
   combined_plot <- reference_corpora_plot + 
-    NOW_right_plot$layers + 
-    NOW_left_plot$layers + 
-    NOW_center_plot$layers + 
+    journalism_low_plot$layers + 
+    journalism_high_plot$layers + 
     theme_minimal() +
     theme(legend.position = "none",
           axis.text.x = element_text(size = 20), # Adjust size as needed
           axis.text.y = element_text(size = 20))  +
     labs(#title = paste(var, " across political leanings"),
-         #caption = paste0("Mean ", var, " over Years"),
-         x = NULL,
-         y = NULL) +
+      #caption = paste0("Mean ", var, " over Years"),
+      x = NULL,
+      y = NULL) +
     scale_x_continuous(breaks = seq(2010, 2022, by = 5)) +
     coord_cartesian(xlim = c(2010, 2022))
   
@@ -170,8 +141,8 @@ for (var in vars) {
   print(combined_plot)
   
   # save plot 
-  filepath <- paste0(dirname, "/political_leaning.jpg")
-  ggsave(filepath, plot = combined_plot, width = 7, height = 7)
+  filepath <- paste0(dirname, "/journalism_low_vs_high.jpg")
+  ggsave(filepath, plot = combined_plot, width = 7, height = 7, bg = "white")
 }
 
 
@@ -201,16 +172,6 @@ plot_corpus_color <- function(var, corpus, color) {
       doc_mean = mean(!!sym(var), na.rm = TRUE))
   
   plot <- ggplot() +
-    geom_line(data = outlet_means, aes(x = year, y = doc_mean, group = source_domain), color = color, alpha = 0.3) +
-    geom_line(data = corpus_summary, aes(x = year, y = mean), color = color, linewidth = 3) 
+    geom_line(data = outlet_means, aes(x = year, y = doc_mean, group = source_domain), color = color, alpha = 0.1) +#0.3) +
+    geom_line(data = corpus_summary, aes(x = year, y = mean), color = color, linewidth = 3)#1.2) 
 }
-
-
-
-# to only use the cleaned NOW corpus in the future:
-NOW <- NOW %>%
-  filter(!grepl("\\.{3}$", raw_text)) %>%
-  distinct(raw_text, .keep_all = TRUE)
-
-
-saveRDS(NOW, "/mnt/home/nickl/Users/NicklPietro/PaperIIwb/results/NOW_cleaned_plotting.rds")
